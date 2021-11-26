@@ -2,6 +2,7 @@ import random
 import acciones
 import datos
 import forward
+import bonos
 
 #pido nombre de persona
 nombre = input("Nombre: ")
@@ -17,7 +18,8 @@ while quit == 0:
     print("1. Comprar acciones")
     print("2. Vender acciones")
     print("3. Crear o ejercer forward")
-    print("4. Ver tu portafolio")
+    print("4. Capturar un bono")
+    print("5. Ver tu portafolio")
     eleccion = int(input())
     print("\n")
 
@@ -47,6 +49,8 @@ while quit == 0:
         datos.saveData()
         print("\n")
     elif eleccion == 4:
+        bonos.do_bono(nombre)
+    elif eleccion == 5:
         datos.verPortafolio(nombre, infoUsuario)
     else: 
         quit = 1

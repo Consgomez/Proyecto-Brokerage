@@ -36,7 +36,7 @@ def getUser(nombre):
 def verPortafolio(nombre, diccionario):
     diccionarioAcciones = diccionario["Acciones"]
     print("---------------------------------")
-    print(nombre)
+    print("USUARIO:" + nombre)
     print()
     print("{:<20} {:<20} {:<20} {:<20}".format("Acciones", "Cantidad", "Precio Unitario", "Total"))
     print("---------------------------------------------------------------------------------------------------")
@@ -45,9 +45,9 @@ def verPortafolio(nombre, diccionario):
         diccionarioNombre = diccionarioAcciones[key]
         print("{:<20} {:<20} {:<20} {:<20}".format(key, str(diccionarioNombre["Cantidad"]), str(diccionarioNombre["Precio Unitario"]), str(diccionarioNombre["Total"])))
 
-    print()
+    print("\n----------------------------------------------\n")
     print("Llevas invertido $" + str(diccionario["Total Invertido"]))
     print("Tu ganancia es de $" + str(diccionario["Ganancias"]))
     print("Tu perdida es de $" + str(diccionario["Perdida"]))
-    print("---------------------------------------------------------------------------------------------------")
-    print()
+    print("Te sobran $" + str(diccionario["Restante"]) + " en tu portafolio")
+    print("---------------------------------------------------------------------------------------------------\n")

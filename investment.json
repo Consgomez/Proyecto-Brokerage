@@ -1,0 +1,12 @@
+{
+    "Cons": {
+        "Saldo Inicial": 1500000,
+        "Total Invertido": 0,
+        "Restante": 1499800.0,
+        "Ganancias": 0,
+        "Perdida": 0,
+        "Forward": 200.0,
+        "Acciones": {},
+        "Venta": {}
+    }
+}

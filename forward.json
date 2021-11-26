@@ -1,0 +1,12 @@
+{
+    "_Cons1": {
+        "Fecha Inicial": "11/18/21",
+        "Bien": "usd/mxn",
+        "Monto": 200.0,
+        "Plazo dias": 30,
+        "Spot": 19.8,
+        "Precio Forward": 20.0,
+        "Valor Nominal": 4000.0,
+        "Estatus": "Completado"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "Cons_Bono_1": {
+        "Valor Nominal": 100000.0,
+        "Plazo": 2,
+        "Fecha de inicio": "11/25/21",
+        "Fecha de vencimiento": "11/27/21",
+        "Tasas": [
+            6.42,
+            6.58,
+            6.79,
+            6.98
+        ]
+    }
+}
