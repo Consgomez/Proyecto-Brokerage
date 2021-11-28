@@ -1,12 +1,43 @@
 {
     "Cons": {
         "Saldo Inicial": 1500000,
-        "Total Invertido": 0,
-        "Restante": 1499800.0,
+        "Total Invertido": 138850.62,
+        "Restante": 1360949.3800000001,
         "Ganancias": 0,
         "Perdida": 0,
         "Forward": 200.0,
-        "Acciones": {},
+        "Acciones": {
+            "aapl": {
+                "Cantidad": 7,
+                "Precio Unitario": 156.81,
+                "Total": 1097.67
+            },
+            "TSLA": {
+                "Cantidad": 1,
+                "Precio Unitario": 1081.92,
+                "Total": 1081.92
+            },
+            "Fb": {
+                "Cantidad": 4,
+                "Precio Unitario": 333.12,
+                "Total": 1332.48
+            },
+            "NFLX": {
+                "Cantidad": 7,
+                "Precio Unitario": 665.64,
+                "Total": 4659.48
+            },
+            "GOOG": {
+                "Cantidad": 2,
+                "Precio Unitario": 57122.399999999994,
+                "Total": 114244.79999999999
+            },
+            "MCD": {
+                "Cantidad": 3,
+                "Precio Unitario": 5478.09,
+                "Total": 16434.27
+            }
+        },
         "Venta": {}
     }
 }

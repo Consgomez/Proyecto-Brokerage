@@ -46,8 +46,8 @@ def verPortafolio(nombre, diccionario):
         print("{:<20} {:<20} {:<20} {:<20}".format(key, str(diccionarioNombre["Cantidad"]), str(diccionarioNombre["Precio Unitario"]), str(diccionarioNombre["Total"])))
 
     print("\n----------------------------------------------\n")
-    print("Llevas invertido $" + str(diccionario["Total Invertido"]))
-    print("Tu ganancia es de $" + str(diccionario["Ganancias"]))
-    print("Tu perdida es de $" + str(diccionario["Perdida"]))
-    print("Te sobran $" + str(diccionario["Restante"]) + " en tu portafolio")
+    print("Llevas invertido $" + str(format(round(diccionario["Total Invertido"], 3), ",")))
+    print("Tu ganancia es de $" + str(format(round(diccionario["Ganancias"], 3), ",")))
+    print("Tu perdida es de $" + str(format(round(diccionario["Perdida"], 3), ",")))
+    print("Te sobran $" + str(format(round(diccionario["Restante"], 3), ",")) + " en tu portafolio")
     print("---------------------------------------------------------------------------------------------------\n")

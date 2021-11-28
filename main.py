@@ -1,8 +1,12 @@
-import random
+import yfinance as yf
 import acciones
 import datos
 import forward
 import bonos
+
+#conseguir tipo de cambio
+cambio = yf.Ticker('MXN=X')
+dolar = cambio.info['open']
 
 #pido nombre de persona
 nombre = input("Nombre: ")
@@ -19,28 +23,36 @@ while quit == 0:
     print("2. Vender acciones")
     print("3. Crear o ejercer forward")
     print("4. Capturar un bono")
-    print("5. Ver tu portafolio")
+    print("5. Calcular VaR del tipo de cambio")
+    print("6. Ver tu portafolio")
     eleccion = int(input())
     print("\n")
 
     if eleccion == 1:
         #obtener información de la accion
-        precioCompra = random.randint(90, 140)
         accion = input("¿Qué acción quieré comprar? ")
-        print("La acción de " + accion + " está a " + str(precioCompra))
+        ticker = yf.Ticker(accion)
+        precioCompra = ticker.info['currentPrice']
+        nombreAccion = ticker.info['shortName']
+        currency = ticker.info['financialCurrency']
+        print("La acción de " + nombreAccion + " está a " + str(precioCompra) + currency)
         cantidad = input("¿Cuántas acciones quieres comprar? ")
         #agregar a bd
-        infoUsuario = acciones.compraAcciones(accion, precioCompra, int(cantidad), infoUsuario, nombre, cantidad)
+        precioFinal = round(precioCompra * dolar, 2)
+        infoUsuario = acciones.compraAcciones(accion.upper(), precioFinal, int(cantidad), infoUsuario, nombre, cantidad)
         datos.portafolio[nombre] = infoUsuario
         datos.saveData()
     elif eleccion == 2:
         #obtener información de la accion
-        precioVenta = random.randint(50, 200)
         accion = input("¿Qué acción quieré vender? ")
-        print("La venta de " + accion + " está a " + str(precioVenta))
+        ticker = yf.Ticker(accion)
+        nombreAccion = ticker.info['shortName']
+        precioVenta = ticker.info['ask']
+        print("La venta de " + nombreAccion + " está a " + str(precioVenta))
         cantidad = input("¿Cuántas acciones quieres vender? ")
         #agregar a bd
-        infoUsuario = acciones.ventaAcciones(accion, precioVenta, int(cantidad), infoUsuario)
+        precioFinal = round(precioVenta * dolar, 2)
+        infoUsuario = acciones.ventaAcciones(accion.upper(), precioFinal, int(cantidad), infoUsuario)
         datos.portafolio[nombre] = infoUsuario
         datos.saveData()
     elif eleccion == 3:
@@ -51,6 +63,8 @@ while quit == 0:
     elif eleccion == 4:
         bonos.do_bono(nombre)
     elif eleccion == 5:
+        print("VaR")
+    elif eleccion == 6:
         datos.verPortafolio(nombre, infoUsuario)
     else: 
         quit = 1
