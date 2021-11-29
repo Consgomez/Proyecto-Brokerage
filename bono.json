@@ -1,14 +1,32 @@
 {
     "Cons_Bono_1": {
-        "Valor Nominal": 100000.0,
-        "Plazo": 2,
-        "Fecha de inicio": "11/25/21",
-        "Fecha de vencimiento": "11/27/21",
+        "Valor Nominal": 17000.0,
+        "Plazo Anios": 3,
+        "Fecha de inicio": "11/28/21",
+        "Fecha de vencimiento": "11/27/24",
         "Tasas": [
             6.42,
-            6.58,
-            6.79,
-            6.98
-        ]
+            6.57,
+            6.72,
+            6.87,
+            7.02,
+            7.17
+        ],
+        "ISR": 16,
+        "Ganancia": 4125.34
+    },
+    "Cons_Bono_2": {
+        "Valor Nominal": 20000.0,
+        "Plazo Anios": 2,
+        "Fecha de inicio": "11/28/21",
+        "Fecha de vencimiento": "11/28/23",
+        "Tasas": [
+            6.42,
+            6.57,
+            6.72,
+            6.87
+        ],
+        "ISR": 16,
+        "Ganancia": 4853.34
     }
 }

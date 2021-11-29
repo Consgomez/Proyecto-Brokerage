@@ -3,6 +3,7 @@ import acciones
 import datos
 import forward
 import bonos
+import valueRisk
 
 #conseguir tipo de cambio
 cambio = yf.Ticker('MXN=X')
@@ -61,9 +62,11 @@ while quit == 0:
         datos.saveData()
         print("\n")
     elif eleccion == 4:
-        bonos.do_bono(nombre)
+        infoUsuario = bonos.do_bono(nombre, infoUsuario)
+        datos.portafolio[nombre] = infoUsuario
+        datos.saveData()
     elif eleccion == 5:
-        print("VaR")
+        valueRisk.getVar()
     elif eleccion == 6:
         datos.verPortafolio(nombre, infoUsuario)
     else: 
