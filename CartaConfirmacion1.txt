@@ -1,0 +1,30 @@
+CONFIRMACIÓN DE OPERACIÓN: Bono
+FECHA: 11/29/21
+ 
+DIRIGIDO A:
+Cons
+ 
+ESTIMADOS SRES.,
+ 
+Hemos procedido a realizar la siguiete operación de Bono, de acuerdo a la carta de instrucción nro. 1 enviada por Uds:
+ 
+1. Detalles de la operación al inicio: 
+ 
+Términos generales
+ 
+Nuestra referencia: Operación1
+Referencia original: Operación1
+Fecha trade (concretación): 11/29/21
+ 
+De acuerdo con nuestro acuerdo de la fecha de negociación como se indica anteriormente, confirmamos la siguiente transacción Bono
+ 
+Cons compra
+ 
+Monto: 1000.0MXN
+Fecha valor: 11/29/21
+Valor unitario: 1
+ 
+Banco vende
+ 
+Monto: 1000.0
+Fecha Valor: 11/29/21

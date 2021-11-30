@@ -1,6 +1,9 @@
 import json
 import datetime
 import pandas as pd
+import carta 
+import random
+import math
 
 def crear_bono():
     bono = dict()
@@ -8,102 +11,107 @@ def crear_bono():
     
     valorNom = float(input("¿Cuánto dinero va a invertir en el bono? "))
     plazo = int(input("¿De cuántos años va a ser el plazo de su bono? "))
+    cupon = int(input("¿De cuántos meses va a ser el plazo del cupón?"))
+    tipo_tasa = int(input("1. Tasa Fija \n2. Tasa Variable \n"))
     
     endDate = date + datetime.timedelta(days=plazo * 365)
     fechaActual = date.strftime("%x")
     fechaFinal = endDate.strftime("%x")
 
-    totalTasas = plazo * 2
+    porAnio = math.floor(12 / cupon)
+    totalTasas = plazo * porAnio
     listaTasas = []
-    tasa = 6.42
+    tasa = 6.59
 
     for x in range(totalTasas):
-        listaTasas.append(round(tasa, 2))
-        tasa = tasa + 0.15
+        if tipo_tasa == 1:
+            listaTasas.append(tasa)
+        elif tipo_tasa == 2:
+            listaTasas.append(round(tasa, 2))
+            tasa = random.uniform(6.42, 6.76)
 
     bono["Valor Nominal"] = valorNom
     bono["Plazo Anios"] = plazo
     bono["Fecha de inicio"] = fechaActual
     bono["Fecha de vencimiento"] = fechaFinal
     bono["Tasas"] = listaTasas
-    bono["ISR"] = 16
+    bono["ISR"] = 0.16
     bono["Ganancia"] = 0
 
     return bono
 
 def data_bono(nombre, info):
     cantidad = info['Valor Nominal']
+    isr = info["ISR"]
+    plazo = info["Plazo Anios"] * 2
 
-    tasa_1 = info['Tasas'][0]
-    tasa_2 = info['Tasas'][1]
-    tasa_3 = info['Tasas'][2]
-    tasa_4 = info['Tasas'][3]
-    isr = info["ISR"] / 100
+    df = pd.DataFrame([[nombre, cantidad]], columns=['Dato', 'Valor'])
 
-    ganancia_1 = cantidad * (tasa_1 / 100)
-    isr_1 = ganancia_1 * isr
-    total_1 = cantidad + ganancia_1 - isr_1
+    total = 0
 
-    ganancia_2 = total_1 * (tasa_2 / 100)
-    isr_2 = ganancia_2 * isr
-    total_2 = total_1 + ganancia_2 - isr_2
-
-    ganancia_3 = total_2 * (tasa_3 / 100)
-    isr_3 = ganancia_3 * isr
-    total_3 = total_2 + ganancia_3 - isr_3
-
-    ganancia_4 = total_3 * (tasa_4 / 100)
-    isr_4 = ganancia_4 * isr
-    total_4 = total_3 + ganancia_4 - isr_4
-
-    data = [[nombre, cantidad], ['Tasa 1', tasa_1], ['Ganancia', ganancia_1], ['ISR', isr_1], ['Ganancia 1', total_1],
-        ['Tasa 2', tasa_2], ['Ganancia', ganancia_2], ['ISR', isr_2], ['Ganancia 2', total_2],
-        ['Tasa 3', tasa_3], ['Ganancia', ganancia_3], ['ISR', isr_3], ['Ganancia 3', total_3],
-        ['Tasa 4', tasa_4], ['Ganancia', ganancia_4], ['ISR', isr_4], ['Ganancia 4', total_4]]
-    df = pd.DataFrame(data, columns=['Dato', 'Valor'])
+    for x in range(plazo):
+        tasa = info['Tasas'][x]
+        if x == 0:
+            ganancia = cantidad * (tasa / 100)
+            con_isr = ganancia * isr
+            total = cantidad + ganancia - con_isr
+        else:
+            ganancia = total * (tasa / 100)
+            con_isr = ganancia * isr
+            total = total + ganancia - con_isr
+        tasaN = 'Tasa' + str(x+1)
+        totalN = 'Total' + str(x+1)
+        df_new = pd.DataFrame([[tasaN, tasa], ['Ganancia', ganancia], ['ISR', isr], [totalN, total]], 
+            columns=['Dato', 'Valor'])
+        df = df.append(df_new)
 
     print(df)
-    print("GANANCIA FINAL: " + str(round(total_4 - cantidad, 2)))
+    print("GANANCIA FINAL: " + str(round(total - cantidad, 2)))
 
-    return round(total_4 - cantidad, 2)
+    return round(total - cantidad, 2)
 
-def check_bono(bonos, portafolio):
+def check_bono(bonos, portafolio, nombre):
     date = datetime.datetime.now()
     fechaActual = date.strftime("%x")
 
     for key in bonos:
         vencimiento = bonos[key]['Fecha de vencimiento']
+        monto = bonos[key]['Valor Nominal']
+        inicio = bonos[key]['Fecha de inicio']
         if vencimiento < fechaActual or vencimiento == fechaActual:
-            portafolio["Ganancias"] = portafolio["Ganancias"] + bonos[key]['Ganancia']
+            if bonos[key]['Ganancia'] > 0:
+                portafolio["Ganancias"] = portafolio["Ganancias"] + bonos[key]['Ganancia']
+            elif bonos[key]['Ganancia'] < 0:
+                portafolio["Perdida"] = portafolio["Perdida"] + bonos[key]['Ganancia']
+            carta.crearCarta('Bono', fechaActual, nombre, inicio, str(monto) + 'MXN', fechaActual, 1, monto)
 
 def do_bono(usuario, diccionario):
     bonoDB = open('bono.json', )
     bonoDict = json.load(bonoDB)
     bonoDB.close()
 
-    print("Desea: ")
-    print("1. Capturar un bono")
-    print("2. Hacer fixing de su bono")
-    opcion = int(input())
-    print("\n")
+    idBono = len(bonoDict.keys()) + 1
+    nombre = usuario + "_Bono_" + str(idBono)
+    print("+++++ Bono: " + nombre + " +++++\n")
+    bonoDict[nombre] = crear_bono()
 
-    if opcion == 1:
-        idBono = len(bonoDict.keys()) + 1
-        nombre = usuario + "_Bono_" + str(idBono)
-        print("+++++ Bono: " + nombre + " +++++\n")
-        print("\n")
-        bonoDict[nombre] = crear_bono()
-
-        monto = bonoDict[nombre]["Valor Nominal"]
-        diccionario["Total Invertido"] = diccionario["Total Invertido"] + monto
-        diccionario["Restante"] = diccionario["Restante"] - monto
+    monto = bonoDict[nombre]["Valor Nominal"]
+    diccionario["Total Invertido"] = diccionario["Total Invertido"] + monto
+    diccionario["Bonos"] = diccionario["Bonos"] + monto
+    diccionario["Restante"] = diccionario["Restante"] - monto
         
-        ganancia = data_bono(nombre, bonoDict[nombre])
-        bonoDict[nombre]["Ganancia"] = ganancia
+    ganancia = data_bono(nombre, bonoDict[nombre])
+    bonoDict[nombre]["Ganancia"] = ganancia
 
-        with open("bono.json", "w", errors="ignore") as outfile:
-            json.dump(bonoDict, outfile, indent=4)
-        
-        check_bono(bonoDict, diccionario)
+    date = datetime.datetime.now()
+    fechaActual = date.strftime("%x")
+    carta.cartaBono('Bono', fechaActual, usuario, bonoDict[nombre]["Plazo Anios"], 
+        bonoDict[nombre]["Fecha de inicio"], bonoDict[nombre]["Fecha de vencimiento"], 
+        bonoDict[nombre]['Tasas'][0], monto)
 
-        return diccionario
+    with open("bono.json", "w", errors="ignore") as outfile:
+        json.dump(bonoDict, outfile, indent=4)
+
+    check_bono(bonoDict, diccionario, usuario)
+
+    return diccionario

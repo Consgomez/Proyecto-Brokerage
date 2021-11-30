@@ -11,10 +11,6 @@ def neteoCompra(cantidad, precioUnidad, data):
     data["Cantidad"] = data["Cantidad"] + cantidad
     data["Precio Unitario"] = (totalAnterior+totalActual)/data["Cantidad"]
     data["Total"] = data["Precio Unitario"] * data["Cantidad"]
-    # lastTotalPrice = (info[1] * info[0])
-    # addingTotalPrice = (precioUnidad * cantidad)
-    # info[0] = info[0] + cantidad
-    # info[1] = (LastTotalPrice+addingTotalPrice)/info[0]
     return data
 
 def compraAcciones(accion, precio, cant, diccionario, nombre, cantidad):

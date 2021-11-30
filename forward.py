@@ -51,7 +51,7 @@ def do_forward(nombre, diccionario):
     elif tipo == 2:
         nombreForward = input("¿Cuál es el id del forward que quiere completar? ")
         bien = forwardDict[nombreForward]["Bien"]
-        #spotActual = float(input("¿Cuál es el precio SPOT del " + bien + "? "))
+        spotActual = float(input("¿Cuál es el precio SPOT del " + bien + "? "))
         precio = forwardDict[nombreForward]["Precio Forward"]
         monto = forwardDict[nombreForward]["Monto"]
         print("\n")
@@ -64,8 +64,8 @@ def do_forward(nombre, diccionario):
             print("\n")
         else:
             forwardDict[nombreForward]["Estatus"] = "Completado"
-            #ganancia = int((precio - spotActual) * monto)
-            #forwardDict[nombreForward]["Ganancia"] = ganancia
+            ganancia = int((precio - spotActual) * monto)
+            forwardDict[nombreForward]["Ganancia"] = ganancia
             forwardDict["_"+nombreForward] = forwardDict[nombreForward]
             fechaInicio = forwardDict[nombreForward]["Fecha Inicial"]
             forwardDict.pop(nombreForward)

@@ -1,11 +1,12 @@
 {
     "Cons": {
         "Saldo Inicial": 1500000,
-        "Total Invertido": 494350.62,
-        "Restante": 905449.3800000001,
-        "Ganancias": 32694.68,
+        "Total Invertido": 943830.62,
+        "Restante": 455969.3800000001,
+        "Ganancias": 241948.39999999994,
         "Perdida": 0,
         "Forward": 200.0,
+        "Bonos": 17000.0,
         "Acciones": {
             "aapl": {
                 "Cantidad": 7,
