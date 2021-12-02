@@ -1,3 +1,12 @@
 {
-    
+    "Constanza1": {
+        "Fecha Inicial": "12/01/21",
+        "Bien": "usd/mxn",
+        "Monto": 15000.0,
+        "Plazo dias": 80,
+        "Spot": 21.4271,
+        "Precio Forward": 21.7,
+        "Valor Nominal": 325500.0,
+        "Estatus": "Pendiente"
+    }
 }

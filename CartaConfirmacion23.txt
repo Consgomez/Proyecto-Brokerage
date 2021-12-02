@@ -1,0 +1,25 @@
+CONFIRMACIÓN DE OPERACIÓN: Bono
+FECHA: 12/01/21
+ 
+DIRIGIDO A: 
+Constanza
+ 
+ESTIMADOS SRES., 
+ 
+Hemos procedido a realizar la siguiente operación de Bono, de acuerdo a la carta de instrucción nro. 23 enviada por Uds: 
+ 
+1. Detalles de la operación al inicio: 
+ 
+Términos generales
+ 
+Nuestra referencia: Operación23
+Referencia original: Operación 23
+Fecha captura: 12/01/21
+ 
+De acuerdo con nuestro acuerdo de la fecha de negociación como se indica anteriormente, confirmamos la siguiente transacción Bono
+A nombre de Constanza
+Con un plazo de 2
+Monto inicial: 20000.0
+Fecha de inicio: 12/01/21
+Fecha de vencimiento: 12/01/23
+Y una tasa inicial del 6.59%

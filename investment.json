@@ -1,12 +1,12 @@
 {
     "Constanza": {
         "Saldo Inicial": 1500000,
-        "Total Invertido": 1073580.12,
-        "Restante": 426419.8800000003,
-        "Ganancias": 0,
+        "Total Invertido": 1199093.62,
+        "Restante": 300906.3800000003,
+        "Ganancias": 27215.88,
         "Perdida": 0,
         "Forward": 0,
-        "Bonos": 0,
+        "Bonos": 55000.0,
         "Acciones": {
             "HYMTF": {
                 "Cantidad": 12,
@@ -107,6 +107,11 @@
                 "Cantidad": 5,
                 "Precio Unitario": 5160.04,
                 "Total": 25800.2
+            },
+            "TSLA": {
+                "Cantidad": 3,
+                "Precio Unitario": 23504.5,
+                "Total": 70513.5
             }
         },
         "Venta": {}

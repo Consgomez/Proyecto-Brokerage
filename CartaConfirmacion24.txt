@@ -1,0 +1,30 @@
+CONFIRMACIÓN DE OPERACIÓN: Bono
+FECHA: 12/01/21
+ 
+DIRIGIDO A:
+Constanza
+ 
+ESTIMADOS SRES.,
+ 
+Hemos procedido a realizar la siguiete operación de Bono, de acuerdo a la carta de instrucción nro. 24 enviada por Uds:
+ 
+1. Detalles de la operación al inicio: 
+ 
+Términos generales
+ 
+Nuestra referencia: Operación24
+Referencia original: Operación24
+Fecha trade (concretación): 12/01/21
+ 
+De acuerdo con nuestro acuerdo de la fecha de negociación como se indica anteriormente, confirmamos la siguiente transacción Bono
+ 
+Constanza compra
+ 
+Monto: 35000.0MXN
+Fecha valor: 12/01/21
+Valor unitario: 1
+ 
+Banco vende
+ 
+Monto: 35000.0
+Fecha Valor: 12/01/21

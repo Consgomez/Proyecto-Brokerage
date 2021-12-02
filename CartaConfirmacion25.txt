@@ -1,0 +1,30 @@
+CONFIRMACIÓN DE OPERACIÓN: capitales
+FECHA: 12/01/21
+ 
+DIRIGIDO A:
+Constanza
+ 
+ESTIMADOS SRES.,
+ 
+Hemos procedido a realizar la siguiete operación de capitales, de acuerdo a la carta de instrucción nro. 25 enviada por Uds:
+ 
+1. Detalles de la operación al inicio: 
+ 
+Términos generales
+ 
+Nuestra referencia: Operación25
+Referencia original: Operación25
+Fecha trade (concretación): 12/01/21
+ 
+De acuerdo con nuestro acuerdo de la fecha de negociación como se indica anteriormente, confirmamos la siguiente transacción capitales
+ 
+Constanza compra
+ 
+Monto: TSLA 3
+Fecha valor: 12/01/21
+Valor unitario: 23504.5
+ 
+Banco vende
+ 
+Monto: 70513.5
+Fecha Valor: 12/01/21
