@@ -20,6 +20,7 @@ def create():
     dataInicial["Ganancias"] = 0
     dataInicial["Perdida"] = 0
     dataInicial["Forward"] = 0
+    dataInicial["Bonos"] = 0
     dataInicial["Acciones"] = dict()
     dataInicial["Venta"] = dict()
     return dataInicial
@@ -27,15 +28,13 @@ def create():
 #Consigo el nombre del usuario y lo guardo si es necesario
 def getUser(nombre):
     if nombre not in portafolio.keys():
-        #saldoInicial = input("Saldo Inicial: ")
-        #print("-------------------------------")
         portafolio[nombre] = create()
         saveData()
     return portafolio[nombre]
 
 def verPortafolio(nombre, diccionario):
     diccionarioAcciones = diccionario["Acciones"]
-    print("---------------------------------")
+    print("----------------------------------------------")
     print("USUARIO:" + nombre)
     print()
     print("{:<20} {:<20} {:<20} {:<20}".format("Acciones", "Cantidad", "Precio Unitario", "Total"))
@@ -43,9 +42,14 @@ def verPortafolio(nombre, diccionario):
 
     for key in diccionarioAcciones.keys():
         diccionarioNombre = diccionarioAcciones[key]
-        print("{:<20} {:<20} {:<20} {:<20}".format(key, str(diccionarioNombre["Cantidad"]), str(diccionarioNombre["Precio Unitario"]), str(diccionarioNombre["Total"])))
+        print("{:<20} {:<20} {:<20} {:<20}".format(key, str(diccionarioNombre["Cantidad"]), str(round(diccionarioNombre["Precio Unitario"], 2)), str(round(diccionarioNombre["Total"], 2))))
+    print("---------------------------------------------------------------------------------------------------")
 
-    print("\n----------------------------------------------\n")
+    print("Dinero invertido en: \n")
+    print("Contrato Forward: $" + str(format(round(diccionario["Forward"], 3), ",")))
+    print("Bonos: " + str(format(round(diccionario["Bonos"], 3), ",")))
+
+    print("----------------------------------------------")
     print("Llevas invertido $" + str(format(round(diccionario["Total Invertido"], 3), ",")))
     print("Tu ganancia es de $" + str(format(round(diccionario["Ganancias"], 3), ",")))
     print("Tu perdida es de $" + str(format(round(diccionario["Perdida"], 3), ",")))

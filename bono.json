@@ -1,20 +1,3 @@
 {
-    "Cons_Bono_1": {
-        "Valor Nominal": 17000.0,
-        "Plazo Anios": 2,
-        "Fecha de inicio": "11/29/21",
-        "Fecha de vencimiento": "11/29/23",
-        "Tasas": [
-            6.59,
-            6.59,
-            6.59,
-            6.59,
-            6.59,
-            6.59,
-            6.59,
-            6.59
-        ],
-        "ISR": 0.16,
-        "Ganancia": 4088.46
-    }
+    
 }

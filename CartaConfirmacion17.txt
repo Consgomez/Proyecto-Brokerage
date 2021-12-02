@@ -6,25 +6,25 @@ Constanza
  
 ESTIMADOS SRES.,
  
-Hemos procedido a realizar la siguiete operación de capitales, de acuerdo a la carta de instrucción nro. 1 enviada por Uds:
+Hemos procedido a realizar la siguiete operación de capitales, de acuerdo a la carta de instrucción nro. 17 enviada por Uds:
  
 1. Detalles de la operación al inicio: 
  
 Términos generales
  
-Nuestra referencia: Operación1
-Referencia original: Operación1
+Nuestra referencia: Operación17
+Referencia original: Operación17
 Fecha trade (concretación): 12/01/21
  
 De acuerdo con nuestro acuerdo de la fecha de negociación como se indica anteriormente, confirmamos la siguiente transacción capitales
  
 Constanza compra
  
-Monto: HYMTF 12
+Monto: AMZN 7
 Fecha valor: 12/01/21
-Valor unitario: 839.29
+Valor unitario: 73920.48
  
 Banco vende
  
-Monto: 10071.48
+Monto: 517443.36
 Fecha Valor: 12/01/21

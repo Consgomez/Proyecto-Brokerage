@@ -1,42 +1,112 @@
 {
-    "Cons": {
+    "Constanza": {
         "Saldo Inicial": 1500000,
-        "Total Invertido": 943830.62,
-        "Restante": 455969.3800000001,
-        "Ganancias": 241948.39999999994,
+        "Total Invertido": 1073580.12,
+        "Restante": 426419.8800000003,
+        "Ganancias": 0,
         "Perdida": 0,
-        "Forward": 200.0,
-        "Bonos": 17000.0,
+        "Forward": 0,
+        "Bonos": 0,
         "Acciones": {
-            "aapl": {
-                "Cantidad": 7,
-                "Precio Unitario": 156.81,
-                "Total": 1097.67
+            "HYMTF": {
+                "Cantidad": 12,
+                "Precio Unitario": 839.29,
+                "Total": 10071.48
             },
-            "TSLA": {
-                "Cantidad": 1,
-                "Precio Unitario": 1081.92,
-                "Total": 1081.92
+            "LACOMERUBC.MX": {
+                "Cantidad": 20,
+                "Precio Unitario": 36.04,
+                "Total": 720.8
             },
-            "Fb": {
+            "WMT.MX": {
+                "Cantidad": 5,
+                "Precio Unitario": 63558.75,
+                "Total": 317793.75
+            },
+            "1810.HK": {
+                "Cantidad": 30,
+                "Precio Unitario": 418.14,
+                "Total": 12544.199999999999
+            },
+            "AZN": {
                 "Cantidad": 4,
-                "Precio Unitario": 333.12,
-                "Total": 1332.48
+                "Precio Unitario": 1178.02,
+                "Total": 4712.08
             },
-            "NFLX": {
+            "BYND": {
                 "Cantidad": 7,
-                "Precio Unitario": 665.64,
-                "Total": 4659.48
+                "Precio Unitario": 1422.2899999999997,
+                "Total": 9956.029999999999
             },
-            "GOOG": {
-                "Cantidad": 2,
-                "Precio Unitario": 57122.399999999994,
-                "Total": 114244.79999999999
+            "HPE": {
+                "Cantidad": 3,
+                "Precio Unitario": 305.02,
+                "Total": 915.06
             },
             "MCD": {
+                "Cantidad": 5,
+                "Precio Unitario": 5241.4,
+                "Total": 26207.0
+            },
+            "TWTR": {
+                "Cantidad": 10,
+                "Precio Unitario": 919.14,
+                "Total": 9191.4
+            },
+            "BOLSAA.MX": {
+                "Cantidad": 14,
+                "Precio Unitario": 36.05,
+                "Total": 504.69999999999993
+            },
+            "AAPL": {
+                "Cantidad": 10,
+                "Precio Unitario": 3536.84,
+                "Total": 35368.4
+            },
+            "HEIA.AS": {
+                "Cantidad": 4,
+                "Precio Unitario": 1877.36,
+                "Total": 7509.44
+            },
+            "JNJ": {
+                "Cantidad": 4,
+                "Precio Unitario": 3393.23,
+                "Total": 13572.92
+            },
+            "UAL": {
+                "Cantidad": 5,
+                "Precio Unitario": 838.43,
+                "Total": 4192.15
+            },
+            "TM": {
+                "Cantidad": 7,
+                "Precio Unitario": 3827.05,
+                "Total": 26789.350000000002
+            },
+            "PFE": {
+                "Cantidad": 10,
+                "Precio Unitario": 1173.72,
+                "Total": 11737.2
+            },
+            "AMZN": {
+                "Cantidad": 7,
+                "Precio Unitario": 73920.48,
+                "Total": 517443.36
+            },
+            "DIS": {
+                "Cantidad": 6,
+                "Precio Unitario": 3051.2899999999995,
+                "Total": 18307.739999999998
+            },
+            "NVDA": {
                 "Cantidad": 3,
-                "Precio Unitario": 5478.09,
-                "Total": 16434.27
+                "Precio Unitario": 6747.62,
+                "Total": 20242.86
+            },
+            "TGT": {
+                "Cantidad": 5,
+                "Precio Unitario": 5160.04,
+                "Total": 25800.2
             }
         },
         "Venta": {}

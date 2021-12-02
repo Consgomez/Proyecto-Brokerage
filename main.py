@@ -39,7 +39,12 @@ while quit == 0:
         print("La acción de " + nombreAccion + " está a " + str(precioCompra) + currency)
         cantidad = input("¿Cuántas acciones quieres comprar? ")
         #agregar a bd
-        precioFinal = round(precioCompra * dolar, 2)
+        if currency == "MXN":
+            precioFinal = precioCompra
+        elif currency == "HK":
+            precioFinal = round(precioCompra * 2.75, 2)
+        else:
+            precioFinal = round(precioCompra * dolar, 2)
         infoUsuario = acciones.compraAcciones(accion.upper(), precioFinal, int(cantidad), infoUsuario, nombre, cantidad)
         datos.portafolio[nombre] = infoUsuario
         datos.saveData()

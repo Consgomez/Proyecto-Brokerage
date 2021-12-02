@@ -1,6 +1,4 @@
-from numpy.core.fromnumeric import std, var
 import yfinance as yf
-from scipy.stats import norm
 from tabulate import tabulate
 import datetime
 import pandas as pd
@@ -17,7 +15,7 @@ def getVar():
     date = datetime.datetime.now()
     fechaActual = date.strftime("%Y-%m-%d")
 
-    daily = yf.download('MXN=X', '2020-01-01', fechaActual) #
+    daily = yf.download('MXN=X', '2020-01-01', fechaActual)
     daily['returns'] = daily.Close.pct_change()
     dolarHoy = daily['Open'].iloc[-1]
     daily = daily.dropna()

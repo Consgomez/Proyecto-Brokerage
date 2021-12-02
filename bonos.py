@@ -11,10 +11,10 @@ def crear_bono():
     
     valorNom = float(input("¿Cuánto dinero va a invertir en el bono? "))
     plazo = int(input("¿De cuántos años va a ser el plazo de su bono? "))
-    cupon = int(input("¿De cuántos meses va a ser el plazo del cupón?"))
+    cupon = int(input("¿De cuántos meses va a ser el plazo del cupón? "))
     tipo_tasa = int(input("1. Tasa Fija \n2. Tasa Variable \n"))
     
-    endDate = date + datetime.timedelta(days=plazo * 365)
+    endDate = date + datetime.timedelta(days = plazo * 365)
     fechaActual = date.strftime("%x")
     fechaFinal = endDate.strftime("%x")
 
@@ -28,7 +28,7 @@ def crear_bono():
             listaTasas.append(tasa)
         elif tipo_tasa == 2:
             listaTasas.append(round(tasa, 2))
-            tasa = random.uniform(6.42, 6.76)
+            tasa = random.uniform(6.42, 6.89)
 
     bono["Valor Nominal"] = valorNom
     bono["Plazo Anios"] = plazo
