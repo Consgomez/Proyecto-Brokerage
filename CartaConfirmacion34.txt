@@ -1,0 +1,30 @@
+CONFIRMACIÓN DE OPERACIÓN: FX Opción
+FECHA: 12/02/21
+ 
+DIRIGIDO A:
+Constanza
+ 
+ESTIMADOS SRES.,
+ 
+Hemos procedido a realizar la siguiete operación de FX Opción, de acuerdo a la carta de instrucción nro. 34 enviada por Uds:
+ 
+1. Detalles de la operación al inicio: 
+ 
+Términos generales
+ 
+Nuestra referencia: Operación34
+Referencia original: Operación34
+Fecha trade (concretación): 08/08/21
+ 
+De acuerdo con nuestro acuerdo de la fecha de negociación como se indica anteriormente, confirmamos la siguiente transacción FX Opción
+ 
+Constanza compra
+ 
+Monto: EUR/MXN 2000.0
+Fecha valor: 12/02/21
+Valor unitario: 23.83
+ 
+Banco vende
+ 
+Monto: 47660.0
+Fecha Valor: 12/02/21

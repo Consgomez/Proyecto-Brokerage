@@ -2,8 +2,8 @@
     "Constanza_Bono_1": {
         "Valor Nominal": 35000.0,
         "Plazo Anios": 3,
-        "Fecha de inicio": "12/01/21",
-        "Fecha de vencimiento": "11/30/24",
+        "Fecha de inicio": "12/01/18",
+        "Fecha de vencimiento": "12/02/21",
         "Tasas": [
             6.59,
             6.58,
@@ -34,5 +34,63 @@
         ],
         "ISR": 0.16,
         "Ganancia": 4809.95
+    },
+    "Constanza_Bono_3": {
+        "Valor Nominal": 40000.0,
+        "Plazo Anios": 5,
+        "Fecha de inicio": "12/02/21",
+        "Fecha de vencimiento": "12/01/26",
+        "Tasas": [
+            6.59,
+            6.76,
+            6.43,
+            6.47,
+            6.61,
+            6.54,
+            6.45,
+            6.65,
+            6.62,
+            6.51
+        ],
+        "ISR": 0.16,
+        "Ganancia": 28409.29
+    },
+    "Constanza_Bono_4": {
+        "Valor Nominal": 30800.0,
+        "Plazo Anios": 7,
+        "Fecha de inicio": "12/02/21",
+        "Fecha de vencimiento": "11/30/28",
+        "Tasas": [
+            6.59,
+            6.77,
+            6.45,
+            6.88,
+            6.54,
+            6.66,
+            6.86,
+            6.51,
+            6.7,
+            6.89,
+            6.81,
+            6.62,
+            6.74,
+            6.65,
+            6.8,
+            6.43,
+            6.82,
+            6.72,
+            6.83,
+            6.68,
+            6.62,
+            6.54,
+            6.59,
+            6.71,
+            6.74,
+            6.47,
+            6.73,
+            6.79
+        ],
+        "ISR": 0.16,
+        "Ganancia": 35422.41
     }
 }

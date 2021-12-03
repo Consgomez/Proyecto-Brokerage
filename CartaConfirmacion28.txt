@@ -1,0 +1,30 @@
+CONFIRMACIÓN DE OPERACIÓN: capitales
+FECHA: 12/02/21
+ 
+DIRIGIDO A:
+Constanza
+ 
+ESTIMADOS SRES.,
+ 
+Hemos procedido a realizar la siguiete operación de capitales, de acuerdo a la carta de instrucción nro. 28 enviada por Uds:
+ 
+1. Detalles de la operación al inicio: 
+ 
+Términos generales
+ 
+Nuestra referencia: Operación28
+Referencia original: Operación28
+Fecha trade (concretación): 12/02/21
+ 
+De acuerdo con nuestro acuerdo de la fecha de negociación como se indica anteriormente, confirmamos la siguiente transacción capitales
+ 
+Constanza compra
+ 
+Monto: JNJ 1
+Fecha valor: 12/02/21
+Valor unitario: 3338.32
+ 
+Banco vende
+ 
+Monto: 3338.32
+Fecha Valor: 12/02/21

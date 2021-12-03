@@ -54,13 +54,15 @@ while quit == 0:
         ticker = yf.Ticker(accion)
         nombreAccion = ticker.info['shortName']
         precioVenta = ticker.info['ask']
-        print("La venta de " + nombreAccion + " está a " + str(precioVenta))
-        cantidad = input("¿Cuántas acciones quieres vender? ")
-        #agregar a bd
-        precioFinal = round(precioVenta * dolar, 2)
-        infoUsuario = acciones.ventaAcciones(accion.upper(), precioFinal, int(cantidad), infoUsuario)
-        datos.portafolio[nombre] = infoUsuario
-        datos.saveData()
+        currency = ticker.info['financialCurrency']
+        print("La venta de " + nombreAccion + " está a " + str(precioVenta) + currency)
+        cantidad = int(input("¿Cuántas acciones quieres vender? "))
+        if cantidad > 0:
+            #agregar a bd
+            precioFinal = round(precioVenta * dolar, 2)
+            infoUsuario = acciones.ventaAcciones(accion.upper(), precioFinal, cantidad, infoUsuario)
+            datos.portafolio[nombre] = infoUsuario
+            datos.saveData()
     elif eleccion == 3:
         infoUsuario = forward.do_forward(nombre, infoUsuario)
         datos.portafolio[nombre] = infoUsuario

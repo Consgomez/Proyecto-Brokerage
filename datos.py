@@ -42,12 +42,13 @@ def verPortafolio(nombre, diccionario):
 
     for key in diccionarioAcciones.keys():
         diccionarioNombre = diccionarioAcciones[key]
-        print("{:<20} {:<20} {:<20} {:<20}".format(key, str(diccionarioNombre["Cantidad"]), str(round(diccionarioNombre["Precio Unitario"], 2)), str(round(diccionarioNombre["Total"], 2))))
+        if diccionarioNombre["Cantidad"] > 0:
+            print("{:<20} {:<20} {:<20} {:<20}".format(key, str(diccionarioNombre["Cantidad"]), str(round(diccionarioNombre["Precio Unitario"], 2)), str(round(diccionarioNombre["Total"], 2))))
     print("---------------------------------------------------------------------------------------------------")
 
     print("Dinero invertido en: \n")
     print("Contrato Forward: $" + str(format(round(diccionario["Forward"], 3), ",")))
-    print("Bonos: " + str(format(round(diccionario["Bonos"], 3), ",")))
+    print("Bonos: $" + str(format(round(diccionario["Bonos"], 3), ",")))
 
     print("----------------------------------------------")
     print("Llevas invertido $" + str(format(round(diccionario["Total Invertido"], 3), ",")))

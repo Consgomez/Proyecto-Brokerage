@@ -8,7 +8,7 @@ def crearForward():
     date = datetime.datetime.now()
     
     fechaActual = date.strftime("%x")
-    bien = input("¿Qué tipo de divisa va a usar? ")
+    bien = input("¿Qué es el bien que va a usar? ")
     monto = float(input("¿Cuál es el monto inicial? "))
     plazo = int(input("¿Cuál es el plazo? "))
     spot = float(input("¿Cuál es el precio SPOT? "))
@@ -45,6 +45,7 @@ def do_forward(nombre, diccionario):
         print("\n")
         print("+++++ Nuevo Forward: " + nombreForward + " +++++\n")
         forwardDict[nombreForward] = crearForward()
+        diccionario["Forward"] = diccionario["Forward"] + monto
         #guardar en el json
         with open("forward.json", "w", errors="ignore") as outfile:
             json.dump(forwardDict, outfile, indent=4)
@@ -56,8 +57,7 @@ def do_forward(nombre, diccionario):
         monto = forwardDict[nombreForward]["Monto"]
         print("\n")
 
-        diccionario["Forward"] = diccionario["Forward"] + monto
-        diccionario["Restante"] = diccionario["Restante"] - monto
+        diccionario["Restante"] = diccionario["Restante"] - (spotActual * monto)
 
         if nombreForward not in forwardDict.keys():
             print("Ese forward no existe, intente de nuevo")
@@ -65,7 +65,11 @@ def do_forward(nombre, diccionario):
         else:
             forwardDict[nombreForward]["Estatus"] = "Completado"
             ganancia = int((precio - spotActual) * monto)
-            forwardDict[nombreForward]["Ganancia"] = ganancia
+            diccionario["Total Invertido"] = diccionario["Total Invertido"] + (spotActual * monto)
+            if ganancia < 0:
+                diccionario["Ganancias"] = diccionario["Ganancias"] - ganancia
+            elif ganancia > 0:
+                diccionario["Ganancias"] = diccionario["Ganancias"] - ganancia
             forwardDict["_"+nombreForward] = forwardDict[nombreForward]
             fechaInicio = forwardDict[nombreForward]["Fecha Inicial"]
             forwardDict.pop(nombreForward)

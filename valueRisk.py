@@ -41,7 +41,7 @@ def getVar():
     pasado_99 = round(pastData['Value at risk'][0], 6)
     pasado_95 = round(pastData['Value at risk'][1], 6)
     diferencia = getPorcentaje(round(var_99, 6), round(var_95, 6), pasado_99, pasado_95)
-    print("De acuerdo a la última actualización el VaR ha cambiado un " + str(diferencia) + "%")
+    print("De acuerdo a la última actualización el VaR ha cambiado un " + str(round(diferencia, 6)) + "%")
 
     if(pastData['Fecha'][0] != fechaActual):
         data = {'Percentage': ['99%', '95%'], 'Value at risk': [var_99, var_95], 'Fecha': [fechaActual, fechaActual]}
